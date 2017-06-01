@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 var authors = require('./authorData').authors;
 var _ = require('lodash');
 
-var _generatedId = function(item){
-    return JSON.parse(JSON.stringify(item));
+var _generatedId = function(author){
+    return author.firstName.toLowerCase() + '-' + author.lastName.toLowerCase();
 };
 
 var AuthorApi = {
